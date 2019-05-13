@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package server;
+option go_package = "mcp";
+
+enum ClientState {
+    HANDSHAKING = 0;
+    STATUS = 1;
+    LOGIN = 2;
+    PLAY = 3;
+}
+
+message Handshake {
+    uint64 protocol_version = 1;
+    // string server_address = 2;
+    // int32 server_port = 3;
+    // ClientState NextState = 4;
+}
+
+// message Response {
+//     string json_response = 1;
+// }
+
+// message Ping {
+//     double payload = 1;
+// }
+
+// message Pong {
+//     double payload = 1;
+// }
